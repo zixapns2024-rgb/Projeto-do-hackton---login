@@ -1,0 +1,86 @@
+body {
+    font-family: arial, Arial, Helvetica, sans-serif;
+    background: linear-gradient(135deg, #5a5a9d 0%, #3f3f7a 100%);
+    display: flex;
+    flex-direction: column;
+
+}
+
+h1, h3 {
+    color: white;
+}
+
+.card h3, .card p {
+    color: #333;
+    margin: 5px 0; /* Remove margens excessivas dos textos internos */
+}
+
+.card i {
+    font-size: 30px;
+    color: #5a5a9d;
+    margin-bottom: 10px;
+    display: block;
+}
+.container-dashboard {
+    max-width: 1200px; /* Largura máxima para não espichar em telas gigantes */
+    margin: 0 auto;    /* Centraliza o bloco todo na tela */
+    padding: 40px 20px; /* Espaço interno nas laterais e no topo */
+}
+
+.area-cards {
+    display: flex;
+    gap: 50px; /* Espaço entre os cartões */
+    flex-wrap: wrap; /* Se não couber na tela, eles pulam para baixo */
+    justify-content: flex-start;
+    margin-top: 30px;
+}
+
+.card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 200px;
+    /* Vai criar uma sombra com desfoque */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s; /*Para o efeito hover */
+}
+
+.card:hover {
+    transform: translateY(-5px); /* O card "sobe" levemente quando passa o mouse */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.btn-sair {
+    background-color: red;
+    padding: 5px 5px;
+    border-radius: 10%;
+    width: 50px;
+    height: 50ps;
+    display: inline-block;
+    margin: 20px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    flex-direction: column;
+}
+
+/*--------Cartão de visitas------------*/
+
+.nome {
+    background-color: black;
+    font-size: 40px;
+}
+
+.profissao {
+    background-color: white;
+    font-style: italic;
+}
+
+.foto-perfil {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover; 
+    border: 3px solid blue;
+    margin-bottom: 15px;
+}
