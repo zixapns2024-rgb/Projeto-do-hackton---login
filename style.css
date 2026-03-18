@@ -21,6 +21,21 @@ form {
     color: white;
 }
 
+.tela-login p {
+    margin-top: 15px;
+    text-align: center;
+}
+
+.tela-login a{
+    color: #FFFF;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.tela-login a:hover {
+    text-decoration: underline;
+}
+
 input {
     padding: 5px;
     border: none;

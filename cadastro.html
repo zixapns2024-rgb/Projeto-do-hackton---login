@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Usuário</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="Favicon do meu site.png" type="image/x-icon">
+</head>
+<body>
+    <div class="tela-login">
+        <h1>Cadastro</h1>
+        <form action="/cadastro" method="post">
+            <input type="text" name="nome" placeholder="Nome" required>
+            <input type="email" name="email" placeholder="Endereço de e-mail" required>
+            <input type="password" name="senha" placeholder="Senha" required minlength="8">
+                <button type="submit">Cadastrar</button>
+        </form>
+    </div>
+</body>
+</html>
