@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./cadastro.js" defer></script>
     <title>Cadastro de Usuário</title>
 
     <link rel="stylesheet" href="style.css">
@@ -12,9 +13,9 @@
     <div class="tela-login">
         <h1>Cadastro</h1>
         <form action="/cadastro" method="post">
-            <input type="text" name="nome" placeholder="Nome" required>
-            <input type="email" name="email" placeholder="Endereço de e-mail" required>
-            <input type="password" name="senha" placeholder="Senha" required minlength="8">
+            <input type="text" class="nome" name="nome" placeholder="Nome" required>
+            <input type="email" class="email" name="email" placeholder="Endereço de e-mail" required>
+            <input type="password" class="senha" name="senha" placeholder="Senha" required minlength="8">
                 <button type="submit">Cadastrar</button>
         </form>
     </div>
