@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestão de Alunos</title>
+
+    <link rel="stylesheet" href="style2.css">
+    <link rel="shortcut icon" href="Favicon do meu site.png" type="image/x-icon">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Sistema de Registro de Alunos</h1>
+            <p>Plataforma Profissional de Gestão de Estudantes</p>
+        </div>
+
+        <div class="cards">
+            <div class="card">
+                <h2>0</h2>
+                <p>Total de alunos</p>
+            </div>
+
+            <div class="card">
+                <h2>3</h2>
+                <p>Cursos ativos</p>
+            </div>
+
+            <div class="card">
+                <h2>5</h2>
+                <p>Turmas</p>
+            </div>
+        </div>
+
+        <div class="add-aluno">
+            <button>Adicionar novo aluno</button>
+        </div>
+
+        <div class="aluno-area">
+            <h2>Alunos registrados</h2>
+
+            <div class="actions">
+                <input type="text" placeholder="Buscar por nome, e-mail ou ID...">
+
+                <select>
+                    <option>Todos os cursos</option>
+                    <option>Análise e Desenvolvimento de Sistemas</option>
+                    <option>Ciência da Computação</option>
+                    <option>Engenharia de Software</option>
+                </select>
+            </div>
+
+            <div class="tabela-area">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Matrícula (ID)</th>
+                            <th>Nome</th>
+                            <th>E-mail</th>
+                            <th>Telefone</th>
+                            <th>Data de nascimento</th>
+                            <th>Curso</th>
+                            <th>Data da matrícula</th>
+                            <th>Ações</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>STU001</td>
+                            <td>Leonardo Felix</td>
+                            <td>leonardo@gmail.com</td>
+                            <td>(11) 98765-4321</td>
+                            <td>01/02/2002</td>
+                            <td>Análise e Desenvolvimento de Sistemas</td>
+                            <td>19/03/2026</td>
+                            <td>
+                                <button class="btn-editar">Editar</button>
+                                <button class="btn-excluir">Excluir</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
