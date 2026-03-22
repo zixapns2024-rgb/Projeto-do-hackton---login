@@ -1,0 +1,111 @@
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #121212;
+    color: #FFFFFF;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 40px auto;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.header h1 {
+    margin-bottom: 10px;
+    font-size: 32px;
+}
+
+.header p {
+    color: #bdbdbd;
+    font-size: 10px;
+}
+
+.form-area {
+    background-color: #1E1E1E;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.linha-form {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-width: 250px;
+}
+
+
+
+.campo label {
+    margin-bottom: 8px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #FFFFFF;
+}
+
+.campo input,
+.campo select {
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    background-color: #121212;
+    color: #FFFFFF;
+    font-size: 14px;
+}
+
+.campo input::placeholder {
+    color: #bdbdbd;
+}
+
+.botoes {
+    display: flex;
+    gap: 12px;
+    margin-top: 10px;
+}
+
+.btn-salvar {
+    background-color: #66bb6a;
+    border: none;
+    padding: 12px 18px;
+    border-radius: 8px;
+    color: #FFFFFF;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.btn-voltar {
+    background-color: #2a2a2a;
+    padding: 12px 18px;
+    border-radius: 8px;
+    color: #FFFFFF;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn-salvar:hover {
+    background-color: #57a85b;
+}
+
+.btn-voltar:hover {
+    background-color: #3a3a3a;
+}

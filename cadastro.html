@@ -4,20 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="./cadastro.js" defer></script>
-    <title>Cadastro de Usuário</title>
+    <title>Criar Conta</title>
 
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="Favicon do meu site.png" type="image/x-icon">
 </head>
 <body>
     <div class="tela-login">
-        <h1>Cadastro</h1>
+        <h1>Criar Conta</h1>
         <form action="/cadastro" method="POST">
-            <input type="text" class="nome" name="nome" placeholder="Nome" required>
+            <input type="text" class="nome" name="nome" placeholder="Nome Completo" required>
             <input type="email" class="email" name="email" placeholder="Endereço de e-mail" required>
             <input type="password" class="senha" name="senha" placeholder="Senha" required minlength="8">
             <input type="text" class="curso" name="curso" placeholder="Curso" required>
-            <button type="submit" onclick="window.location.href='index.html'">Cadastrar</button>
+            <button type="submit" onclick="window.location.href='index.html'">Criar Conta</button>
         </form>
     </div>
 </body>

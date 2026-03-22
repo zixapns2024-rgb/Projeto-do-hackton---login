@@ -31,6 +31,7 @@ body {
     gap: 20px;
     margin-bottom: 30px;
     flex-wrap: wrap;
+    pointer-events: none;
 }
 
 .card {
@@ -133,4 +134,17 @@ tbody tr {
     border-radius: 8px;
     cursor: pointer;
     color: #FFFFFF;
+}
+
+.btn-add {
+    background-color: #66BB6A;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    margin: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    color: #FFFFFF;
+    font-weight: bold;
+    display: inline-block;
 }
