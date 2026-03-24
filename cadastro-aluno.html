@@ -1,8 +1,9 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./cadastro-aluno.js" defer></script>
     <title>Cadastro de Alunos</title>
 
     <link rel="stylesheet" href="style3.css">
@@ -18,7 +19,7 @@
         </div>
 
         <div class="form-area">
-            <form action="/alunos" method="post">
+            <form id="form-aluno">
 
                 <div class="linha-form">
                     <div class="campo">
@@ -69,7 +70,7 @@
                 </div>
 
                 <div class="botoes">
-                    <a href="alunos.html" class="btn-salvar">Registrar aluno</button>
+                    <button type="submit" class="btn-salvar">Registrar aluno</button>
                     <a href="alunos.html" class="btn-voltar">Cancelar</a>
                 </div>
 
@@ -77,6 +78,60 @@
         </div>
 
     </div>
+
+</body>
+</html> -->
+
+<!-- Antigo código acima ^ -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <script src="./cadastro-aluno.js" defer></script>
+    <title>Cadastro de Aluno</title>
+
+    <link rel="stylesheet" href="style3.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>Cadastro de Aluno</h1>
+
+    <form id="form-aluno">
+
+        <div class="campo">
+            <label>Nome</label>
+            <input type="text" id="nome" required>
+        </div>
+
+        <div class="campo">
+            <label>Email</label>
+            <input type="email" id="email" required>
+        </div>
+
+        <div class="campo">
+            <label>Senha</label>
+            <input type="password" id="senha" required>
+        </div>
+
+        <div class="campo">
+            <label>Curso</label>
+            <select id="curso" required>
+                <option value="">Selecione</option>
+                <option>Sistemas de Informação</option>
+                <option>Ciência da Computação</option>
+                <option>Engenharia da Computação</option>
+            </select>
+        </div>
+
+        <div class="botoes">
+            <button type="submit" class="btn-salvar">Cadastrar</button>
+            <a href="alunos.html" class="btn-voltar">Cancelar</a>
+        </div>
+
+    </form>
+</div>
 
 </body>
 </html>

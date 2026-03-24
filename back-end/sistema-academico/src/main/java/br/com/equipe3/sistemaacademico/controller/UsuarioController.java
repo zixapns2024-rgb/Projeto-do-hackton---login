@@ -1,9 +1,8 @@
 package br.com.equipe3.sistemaacademico.controller;
 
 import java.util.List;
-import java.util.Optional;
 
-import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -14,48 +13,49 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import br.com.equipe3.sistemaacademico.DAO.IUsuario;
 import br.com.equipe3.sistemaacademico.model.Usuario;
+import br.com.equipe3.sistemaacademico.service.UsuarioService;
 
 @RestController
 @CrossOrigin("*")
 @RequestMapping("/usuarios")
 public class UsuarioController {
 	
-	@Autowired
-	private IUsuario dao;
+	private UsuarioService usuarioService;
 	
+	public UsuarioController(UsuarioService usuarioService) {
+		this.usuarioService = usuarioService;
+	}
+
 	@GetMapping
-	public List<Usuario> listaUsuarios() {
-		return (List<Usuario>) dao.findAll();
+	public ResponseEntity<List<Usuario>> listaUsuarios() {
+		return ResponseEntity.status(200).body(usuarioService.listarUsuario());
 	}
 	
 	@PostMapping
-	public Usuario criarUsuario(@RequestBody Usuario usuario) {
-		Usuario novoUsuario = dao.save(usuario);
-		return novoUsuario;
+	public ResponseEntity<Usuario> criarUsuario(@RequestBody Usuario usuario) {
+		return ResponseEntity.status(201).body(usuarioService.criarUsuario(usuario));
 	}
 	
 	@PutMapping
-	public Usuario editarUsuario(@RequestBody Usuario usuario) {
-		Usuario novoUsuario = dao.save(usuario);
-		return novoUsuario;
+	public ResponseEntity<Usuario> editarUsuario(@RequestBody Usuario usuario) {
+		return ResponseEntity.status(201).body(usuarioService.editarUsuario(usuario));
 	}
 	
 	@DeleteMapping("/{id}")
-	public Optional<Usuario> deletarUsuario(@PathVariable Integer id) {
-		Optional<Usuario> usuario = dao.findById(id);
-		dao.deleteById(id);
-		return usuario;
+	public ResponseEntity<?> deletarUsuario(@PathVariable Integer id) {
+		usuarioService.deletarUsuario(id);
+		return ResponseEntity.status(204).build();
 	}
 	
 	@PostMapping("/login")
-	public boolean login(@RequestBody Usuario usuario) {
+	public ResponseEntity<?> login(@RequestBody Usuario usuario) {
+	    boolean valido = usuarioService.validarSenha(usuario);
 
-	    Optional<Usuario> usuarioEncontrado =
-	        dao.findByEmailAndSenha(usuario.getEmail(), usuario.getSenha());
-
-	    return usuarioEncontrado.isPresent();
+	    if (valido) {
+	        return ResponseEntity.ok().build();
+	    } else {
+	        return ResponseEntity.status(401).body("Senha inválida");
+	    }
 	}
-	
 }
