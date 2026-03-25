@@ -18,24 +18,24 @@
 
         <div class="cards">
             <div class="card">
-                <h2>0</h2>
+                <h2 id="total-alunos">0</h2>
                 <p>Total de alunos</p>
             </div>
 
             <div class="card">
-                <h2>3</h2>
+                <h2 id="total-cursos">0</h2>
                 <p>Cursos ativos</p>
             </div>
 
             <div class="card">
-                <h2>5</h2>
+                <h2 id="total-turmas">0</h2>
                 <p>Turmas</p>
             </div>
         </div>
 
         <div class="add-aluno">
             <a href="cadastro-aluno.html" class="btn-add">
-                Adicionar Novo Aluno
+                Adicionar novo aluno
             </a>
         </div>
 
@@ -43,13 +43,13 @@
             <h2>Alunos registrados</h2>
 
             <div class="actions">
-                <input type="text" placeholder="Buscar por nome, e-mail ou ID...">
+                <input type="text" id="busca-aluno" placeholder="Buscar por nome, e-mail ou Matrícula...">
 
-                <select>
-                    <option>Todos os cursos</option>
+                <select id="filtro-curso">
+                    <option value="">Todos os cursos</option>
                     <option>Análise e Desenvolvimento de Sistemas</option>
                     <option>Ciência da Computação</option>
-                    <option>Engenharia de Software</option>
+                    <option>Engenharia da Computação</option>
                 </select>
             </div>
 
@@ -61,28 +61,24 @@
                             <th>Nome</th>
                             <th>E-mail</th>
                             <th>Curso</th>
-                            <!-- Comentei os atributos que não estão no banco por enquanto -->
-                            <!-- <th>Telefone</th>
-                            <th>Data de nascimento</th>
-                            <th>Data da matrícula</th> -->
                             <th>Ações</th>
                         </tr>
                     </thead>
 
-                    <tbody>
-                        <!-- <tr>
+                    <tbody id="lista-alunos">
+                        <!-- Exemplo da linha que depois vai vir do backend / JS -->
+                         <!--
+                         <tr>
                             <td>STU001</td>
-                            <td>Leonardo Felix</td>
-                            <td>leonardo@gmail.com</td>
-                            <td>(11) 98765-4321</td>
-                            <td>01/02/2002</td>
+                            <td>Nome Aluno</td>
+                            <td>aluno@gmail.com</td>
                             <td>Análise e Desenvolvimento de Sistemas</td>
-                            <td>19/03/2026</td>
                             <td>
-                                <button class="btn-editar">Editar</button>
-                                <button class="btn-excluir">Excluir</button>
+                                <a href="editar-aluno.html?id=STU001" class="btn-editar">Editar</a>
+                                <button class="btn-excluir" data-id="STU001">Excluir</button>
                             </td>
-                        </tr> -->
+                        </tr>
+                    -->
                     </tbody>
                 </table>
             </div>

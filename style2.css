@@ -118,22 +118,29 @@ tbody tr {
 
 .btn-editar {
     background-color: #66BB6A;
-    border: none;
-    margin: 5px;
+    color: #FFFFFF;
+    text-decoration: none;
     padding: 5px 10px;
     border-radius: 8px;
+    display: inline-block;
+    margin-right: 5px;
+    font-weight: bold;
     cursor: pointer;
-    color: #FFFFFF;
+    
+    
 }
 
 .btn-excluir {
     background-color: #E53935;
+    color: #FFFFFF;
     border: none;
-    margin: 5px;
     padding: 5px 10px;
     border-radius: 8px;
+    display: inline-block;
+    margin-right: 5px;
+    font-weight: bold;
+    font-size: 14px;
     cursor: pointer;
-    color: #FFFFFF;
 }
 
 .btn-add {
