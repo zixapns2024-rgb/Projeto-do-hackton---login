@@ -23,7 +23,7 @@ public class Aluno {
 	private String email;
 
 	@Column(name = "curso", length = 100, nullable = false)
-	private String senha;
+	private String curso;
 
 	public Integer getId() {
 		return id;
@@ -49,12 +49,12 @@ public class Aluno {
 		this.email = email;
 	}
 
-	public String getSenha() {
-		return senha;
+	public String getCurso() {
+		return curso;
 	}
 
-	public void setSenha(String senha) {
-		this.senha = senha;
+	public void setCurso(String curso) {
+		this.curso = curso;
 	}
 	
 }
