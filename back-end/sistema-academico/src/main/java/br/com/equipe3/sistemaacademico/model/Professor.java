@@ -8,29 +8,26 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "usuarios")
-public class Usuario {
-	
+@Table(name = "professores")
+public class Professor {
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "id")
 	private Integer id;
-	
+
 	@Column(name = "nome_completo", length = 200, nullable = false)
 	private String nome;
-	
-	@Column(name = "email", length = 500, nullable = false)
+
+	@Column(name = "email", length = 50, nullable = false)
 	private String email;
-	
+
 	@Column(name = "senha", columnDefinition = "TEXT", nullable = false)
 	private String senha;
-	
-	@Column(name = "curso", length = 100, nullable = false)
-	private String curso;
 
-	public Usuario() {
+	public Professor() {
 	}
-	
+
 	public Integer getId() {
 		return id;
 	}
@@ -63,13 +60,4 @@ public class Usuario {
 		this.senha = senha;
 	}
 
-	public String getCurso() {
-		return curso;
-	}
-
-	public void setCurso(String curso) {
-		this.curso = curso;
-	}
-	
-	
 }
