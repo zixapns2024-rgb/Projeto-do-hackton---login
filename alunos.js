@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 function listarUsuarios() {
-    fetch("http://localhost:8080/usuarios")
+    fetch("http://localhost:8080/alunos")
         .then(res => res.json())
         .then(dados => {
             preencherTabela(dados);
@@ -39,7 +39,7 @@ function preencherTabela(usuarios) {
 function deletar(id) {
     if (!confirm("Tem certeza que deseja excluir?")) return;
 
-    fetch(`http://localhost:8080/usuarios/${id}`, {
+    fetch(`http://localhost:8080/alunos/${id}`, {
         method: "DELETE"
     })
     .then(() => {
@@ -50,6 +50,5 @@ function deletar(id) {
 }
 
 function editar(id) {
-    alert("Editar usuário ID: " + id);
-    // falta implementar
+    window.location.href = `editar-aluno.html?id=${id}`;
 }

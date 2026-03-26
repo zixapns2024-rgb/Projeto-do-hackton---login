@@ -21,14 +21,30 @@ public class AlunoService {
 		return lista;
 	}
 	
-	public Aluno criarAluno(Aluno Aluno) {
-		Aluno novoAluno = repository.save(Aluno);
+	public Aluno buscarPorId(Integer id) {
+	    return repository.findById(id)
+	        .orElseThrow(() -> new RuntimeException("Aluno não encontrado"));
+	}
+	
+	public Aluno criarAluno(Aluno aluno) {
+		Aluno novoAluno = repository.save(aluno);
 		return novoAluno;
 	}
 	
-	public Aluno editarAluno(Aluno Aluno) {
-		Aluno novoAluno = repository.save(Aluno);
-		return novoAluno;
+	public Aluno editarAluno(Aluno aluno) {
+		Aluno alunoEditado = repository.save(aluno);
+		return alunoEditado;
+	}
+	
+	public Aluno atualizar(Integer id, Aluno alunoAtualizado) {
+	    Aluno aluno = repository.findById(id)
+	        .orElseThrow(() -> new RuntimeException("Aluno não encontrado"));
+
+	    aluno.setNome(alunoAtualizado.getNome());
+	    aluno.setEmail(alunoAtualizado.getEmail());
+	    aluno.setCurso(alunoAtualizado.getCurso());
+
+	    return repository.save(aluno);
 	}
 	
 	public Boolean deletarAluno(Integer id) {

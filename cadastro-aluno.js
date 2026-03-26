@@ -38,11 +38,10 @@ form.addEventListener("submit", function(event) {
     const aluno = {
         nome: document.getElementById("nome").value,
         email: document.getElementById("email").value,
-        senha: document.getElementById("senha").value,
         curso: document.getElementById("curso").value
     };
 
-    fetch("http://localhost:8080/usuarios", {
+    fetch("http://localhost:8080/alunos", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"

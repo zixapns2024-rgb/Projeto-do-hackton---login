@@ -3,11 +3,10 @@ const formulario = document.querySelector("form");
 const Inome = document.querySelector(".nome");
 const Iemail = document.querySelector(".email");
 const Isenha = document.querySelector(".senha");
-const Icurso = document.querySelector(".curso");
 
 function cadastrar() {
 
-    fetch("http://localhost:8080/usuarios",
+    fetch("http://localhost:8080/professores",
     {
         headers: {
             'Accept': 'application/json',
@@ -17,8 +16,7 @@ function cadastrar() {
         body: JSON.stringify({
             nome: Inome.value,
             email: Iemail.value,
-            senha: Isenha.value,
-            curso: Icurso.value
+            senha: Isenha.value
         })
     })
     .then(function (res) { console.log(res) })
@@ -30,7 +28,6 @@ function limpar() {
     Inome.value = "";
     Iemail.value = "";
     Isenha.value = "";
-    Icurso.value = "";
 };
 
 formulario.addEventListener('submit', function (event) {

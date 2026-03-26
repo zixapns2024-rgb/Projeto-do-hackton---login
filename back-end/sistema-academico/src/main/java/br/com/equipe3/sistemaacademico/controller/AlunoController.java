@@ -31,6 +31,11 @@ public class AlunoController {
 	public ResponseEntity<List<Aluno>> listaAluno() {
 		return ResponseEntity.status(200).body(alunoService.listarAluno());
 	}
+	
+	@GetMapping("/{id}")
+	public Aluno buscarPorId(@PathVariable Integer id) {
+	    return alunoService.buscarPorId(id);
+	}
 
 	@PostMapping
 	public ResponseEntity<Aluno> criarAluno(@RequestBody Aluno aluno) {
@@ -40,6 +45,11 @@ public class AlunoController {
 	@PutMapping
 	public ResponseEntity<Aluno> editarAluno(@RequestBody Aluno aluno) {
 		return ResponseEntity.status(201).body(alunoService.editarAluno(aluno));
+	}
+	
+	@PutMapping("/{id}")
+	public Aluno atualizar(@PathVariable Integer id, @RequestBody Aluno aluno) {
+	    return alunoService.atualizar(id, aluno);
 	}
 
 	@DeleteMapping("/{id}")
