@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 function listarUsuarios() {
-    fetch("http://localhost:8080/alunos")
+    fetch("https://projeto-do-hackton-login.onrender.com/alunos")
         .then(res => res.json())
         .then(dados => {
             preencherTabela(dados);
@@ -39,7 +39,7 @@ function preencherTabela(usuarios) {
 function deletar(id) {
     if (!confirm("Tem certeza que deseja excluir?")) return;
 
-    fetch(`http://localhost:8080/alunos/${id}`, {
+    fetch(`https://projeto-do-hackton-login.onrender.com/alunos/${id}`, {
         method: "DELETE"
     })
     .then(() => {

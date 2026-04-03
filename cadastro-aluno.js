@@ -41,7 +41,7 @@ form.addEventListener("submit", function(event) {
         curso: document.getElementById("curso").value
     };
 
-    fetch("http://localhost:8080/alunos", {
+    fetch("https://projeto-do-hackton-login.onrender.com/alunos", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"

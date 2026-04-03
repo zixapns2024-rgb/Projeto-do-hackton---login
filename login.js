@@ -5,7 +5,7 @@ const Iemail = document.querySelector("input[name='email']");
 const Isenha = document.querySelector("input[name='senha']");
 
 function logar() {
-    fetch("http://localhost:8080/professores/login", {
+    fetch("https://projeto-do-hackton-login.onrender.com/professores/login", {
         headers: {
             'Accept': 'application/json',
             'Content-Type': 'application/json'

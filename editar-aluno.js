@@ -2,7 +2,7 @@ const params = new URLSearchParams(window.location.search);
 const id = params.get("id");
 
 document.addEventListener("DOMContentLoaded", () => {
-    fetch(`http://localhost:8080/alunos/${id}`)
+    fetch(`https://projeto-do-hackton-login.onrender.com/alunos/${id}`)
         .then(res => res.json())
         .then(aluno => preencherFormulario(aluno))
         .catch(err => console.log(err));
@@ -26,7 +26,7 @@ form.addEventListener("submit", function (e) {
         curso: document.getElementById("curso").value
     };
 
-    fetch(`http://localhost:8080/alunos/${id}`, {
+    fetch(`https://projeto-do-hackton-login.onrender.com/alunos/${id}`, {
         method: "PUT",
         headers: {
             "Content-Type": "application/json"

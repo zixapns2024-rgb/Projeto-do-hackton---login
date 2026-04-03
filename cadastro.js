@@ -6,7 +6,7 @@ const Isenha = document.querySelector(".senha");
 
 function cadastrar() {
 
-    fetch("http://localhost:8080/professores",
+    fetch("https://projeto-do-hackton-login.onrender.com/professores",
     {
         headers: {
             'Accept': 'application/json',
