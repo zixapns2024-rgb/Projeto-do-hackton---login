@@ -44,6 +44,12 @@ Caso seja necessário rodar localmente, o projeto backend utiliza Java com Sprin
 
 Este projeto foi desenvolvido em contexto de Hackathon, com foco em entrega funcional dentro do prazo. Por isso, algumas melhorias futuras ainda podem ser feitas em pontos como organização interna, validações e refinamentos técnicos.
 
+## Documentação
+
+A documentação completa do sistema pode ser acessada abaixo:
+
+[Documentação do Sistema](./docs/documentacao-sistema-academico.pdf)
+
 ## Equipe
 
 Leonardo Felix
